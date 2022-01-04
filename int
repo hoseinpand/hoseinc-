@@ -1,0 +1,14 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+main(
+{
+int a;
+
+int a = 5;
+
+cout<<a<<endl;/5/
+
+getch();
+}
