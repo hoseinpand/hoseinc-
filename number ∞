@@ -1,0 +1,67 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int sum(int a, int b) {
+    return a + b;
+}
+
+
+int main()
+{
+	int x;
+	int* a = NULL;
+	int* p;
+	int size = 0, c = 0, i;
+	int h=2;
+	
+
+	cout << "number[1]" << "   ";
+
+	while (cin >> x)
+	{
+
+		
+		for (int g = h; g <= h; g++)
+			cout << "number[" << g << "]"<<"   ";
+		h++;
+
+		if (c >= size)
+		{
+			p = new int[size + 3];
+			
+			for (i = 0; i < size; ++i)
+				p[i] = a[i];
+
+			delete[] a;
+
+			a = p;
+			size += 3;
+
+			
+		}
+		a[c++] = x;
+		
+	}
+
+	if (c == 0)
+		cout << "no" << endl;
+	else
+	{
+		int sum = 0;
+		for (i = 0; i < c; i++)
+			sum += a[i];
+
+		cout << "the average" << endl << (float)sum / c << endl;
+
+	}
+
+	delete[]a;
+
+
+
+	cout << "thanks"<<endl;
+
+
+}
+
