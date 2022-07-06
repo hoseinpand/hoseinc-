@@ -1,0 +1,27 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int main()
+{
+	int i, z;
+	float x;
+	int a[100000];
+
+	cout << "how many number do you want enter?"<<endl;
+	cin >> i;
+
+	for (int q = 1; q <= i; q++) {
+		cout << "enter the number " << q << endl;
+		cin >> a[q];
+	}
+	z = 0;
+	for (int w = 1; w < +i; w++) {
+		z = z + a[w];
+	}
+
+	x = (float)z / (float)i;
+	cout << x;
+
+	return 0;
+}
