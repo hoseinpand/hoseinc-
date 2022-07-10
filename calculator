@@ -1,0 +1,43 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int main()
+{
+
+    float c;
+    int x[100];
+    char x2[100];
+
+    cout << "enter your equation" << endl;
+    for (int q = 0; q <= 100 - 1; q++) {
+        cin >> x[q];
+        cin >> x2[q];
+        if (x2[q] == '=')
+            break;
+    }
+
+    c = x[0];
+
+
+    for (int w = 0; w <= 100 - 2; w++) {
+        if (x2[w] != '=') {
+
+            if (x2[w] == '+') {
+                c = c + x[w + 1];
+            }
+            if (x2[w] == '-') {
+                c = c - x[w + 1];
+            }
+            if (x2[w] == '*') {
+                c = c * x[w + 1];
+            }
+            if (x2[w] == '/') {
+                c = (float)c / (float)x[w + 1];
+            }
+        }
+    }
+
+    cout << "answer  " << c << endl;
+    return 0;
+}
