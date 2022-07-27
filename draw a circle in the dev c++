@@ -1,0 +1,15 @@
+#define _WIN32_WINNT 0x0500
+#include <graphics.h>
+
+int main()
+{
+	HWND Handle = GetConsoleWindow();
+	ShowWindow(Handle ,SW_HIDE);
+	initwindow (400 , 400 ,"viewport");
+	
+	    circle(200,200,200);
+	    
+	    getch();
+	    closegraph();
+	    return 0;
+}
