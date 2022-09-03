@@ -1,0 +1,116 @@
+#include <windows.h>
+#define _WIN32_WINNT 0X0500
+#include <graphics.h>
+#include <stdlib.h>
+
+int main()
+{
+	initwindow(500,500,"circle",300,150);
+	
+	int m1=0,v,c,k,l,y,q=250,w=400;
+	int h=100,i,i2,o=1,x,z=10,m=0;
+	
+	circle(250,400,z);
+	while(1){
+		cleardevice();
+		c=rand() % 300 + 1;
+		v=rand() % 301 + 1;
+		y=rand()% 400+1;
+		x=rand() % 401 + 1;
+		setfillstyle(1,15);
+		bar(x,y,x+10,y+10);
+		
+		setfillstyle(1,RED);
+		bar(c,v,c+h,v+10);
+		h=h+10;
+		char buffer1[60];
+		
+		setcolor(15);
+		circle(q,w,z);
+		
+		while(1)
+		{
+			char buffer[100];
+			
+			sprintf(buffer,"%d",m);
+			settextstyle(4,0,4);
+			outtextxy(380,20,buffer);
+			
+			i=getch();
+			
+			if(i==72){
+				
+				setcolor(15);
+				circle(q,w,z);
+				delay(1);
+				setcolor(0);
+				circle(q,w,z);
+				w=w-5;
+				
+				setcolor(15);
+				circle(q,w,z);				
+			}
+			
+			if(i==80){
+				setcolor(15);
+				circle(q,w,z);
+				delay(1);
+				setcolor(0);
+				circle(q,w,z);
+				w=w+5;
+				setcolor(15);
+				circle(q,w,z);
+			}
+			
+			if(i==75){
+				setcolor(15);
+				circle(q,w,z);
+				delay(1);
+				setcolor(0);
+				circle(q,w,z);
+				q=q-5;
+				setcolor(15);
+				circle(q,w,z);
+			}
+			
+			if(i==77){
+				setcolor(15);
+				circle(q,w,z);
+				delay(1);
+				setcolor(0);
+				circle(q,w,z);
+				q=q+5;
+				setcolor(15);
+				circle(q,w,z);
+			}
+			
+			if((q>= x) && (q<= x+z) && (w>=y) && (w<=y+z)){
+				m++;
+				z=z+2;
+				break;
+			}
+			if((q==500)||(q==0)||(w==500)||(w==0)    ||    (q>=c-z) && (q<= c+z+h) && (w>= v-z) && (w<= v+z+10)){
+				m=0;
+				z=10;
+				h=100;
+				settextstyle(4,0,4);
+				outtextxy(150,200,"you lose!");
+				settextstyle(4,0,4);
+				delay(1000);
+				setcolor(0);
+				outtextxy(150,200,"you lose!");
+				
+				    setcolor(0);
+				    circle(q,w,z);
+				    q=250;
+				    w=400;
+				    
+				    break;
+			}
+		}
+		}
+	
+	getch();
+	closegraph();
+	return 0;
+}
