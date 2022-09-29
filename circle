@@ -1,7 +1,7 @@
-#include <windows.h>
 #define _WIN32_WINNT 0X0500
 #include <graphics.h>
 #include <stdlib.h>
+#include <time.h>
 
 int main()
 {
@@ -9,7 +9,7 @@ int main()
 	
 	int m1=0,v,c,k,l,y,q=250,w=400;
 	int h=100,i,i2,o=1,x,z=10,m=0;
-	
+	  srand(time(0));
 	circle(250,400,z);
 	while(1){
 		cleardevice();
