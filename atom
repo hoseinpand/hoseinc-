@@ -1,0 +1,579 @@
+#define _WIN32_WINNT 0x0500
+#include <graphics.h>
+#include <math.h>
+#include <stdio.h>
+#include <string>
+using namespace std;
+
+
+int main()
+{
+
+HWND Handle = GetConsoleWindow();
+ShowWindow(Handle ,SW_HIDE);
+    
+    int z,c,q,w,e,r,b,a;
+    char t,n;
+    int x[100]={700,700,700,700,700,700,594}; 
+    int y[100]={300,100,350,150,50,350,306};
+     
+    
+    char code; 
+    
+	while(1){
+	b=1;
+    initwindow(1000, 500 , "pand",100,170);
+    
+    readimagefile("C:/Users/AliRezaMaftuni/Downloads/back.jpg",0,0,1000,500);
+    	setbkcolor(15);
+    	setcolor(0);
+        settextstyle(9,0,2);
+	    settextjustify(1,1);
+	    
+	    outtextxy(50,50,"Enter ");
+	    outtextxy(100,100,"H for hydrogen");
+        outtextxy(90,120,"he for heliom");
+        outtextxy(80,140,"li for litiom");
+        outtextxy(95,160,"be for berliom");
+        outtextxy(80,180,"B for boron");
+        outtextxy(85,200,"C for Carbon");
+		setcolor(0);
+        rectangle(10, 420, 200, 380); 
+        
+		
+
+    	code=getch();
+    	
+	
+    	if(code=='h'){
+    		outtextxy(90,405,"h");
+    		t=getch();
+    		if(t=='e'){
+    			outtextxy(105,405,"e");
+			b=2;
+    		
+				for(int i=10 ; i >= 0 ; i--)
+		{
+			
+		//PROTON
+		setfillstyle(1, 1);
+		fillellipse(690, 200, 10, 10);
+		setfillstyle(1, 1);
+		fillellipse(710, 200, 10, 10);
+		//notron
+		setfillstyle(1, 4);
+		fillellipse(690, 220, 10, 10);
+		setfillstyle(1, 4);
+		fillellipse(710, 220, 10, 10);	
+	
+			//atom
+		setcolor(BLACK);
+		circle(700,200,100);
+		
+		//electron
+		setfillstyle(1, 14);
+		fillellipse(x[0], y[0], 10, 10);
+		setfillstyle(1, 14);
+		fillellipse(x[1], y[1], 10, 10);
+        delay(200);
+    setcolor(WHITE);
+    	setfillstyle(1, 15);
+		fillellipse(x[0], y[0], 10, 10);
+		setcolor(WHITE);
+    	setfillstyle(1, 15);
+		fillellipse(x[1], y[1], 10, 10);
+    	
+    	
+    		
+    	
+    	y[0] = 200+sin(i)*100;
+    	x[0] = 700+cos(i)*100;
+    	
+    	y[1] = 200-sin(i)*100;
+    	x[1] = 700-cos(i)*100;
+    }
+    setcolor(BLACK);
+		circle(700,200,100);
+
+        setfillstyle(1, 14);
+		fillellipse(x[0], y[0], 10, 10);
+		setfillstyle(1, 14);
+		fillellipse(x[1], y[1], 10, 10);
+}
+
+}
+
+    	
+    if(code=='H'){
+    	b=2;
+    	outtextxy(90,405,"H");
+	for(int i=10 ; i >= 0 ; i--)
+		{
+			
+		
+		//POROTON	
+		setfillstyle(1, 1);
+		fillellipse(700, 200, 10, 10);
+			
+		//ATOM	
+		setcolor(BLACK);
+		circle(700,200,100);
+		//ELECTRON
+		setfillstyle(1, 14);
+		fillellipse(x[0], y[0], 10, 10);
+    	floodfill(y[0],x[0],WHITE);
+    	delay(200);
+    	setcolor(WHITE);
+    	setfillstyle(1, 15);
+		fillellipse(x[0], y[0], 10, 10);
+    	
+    	y[0] = 200+sin(i)*100;
+    	x[0] = 700+cos(i)*100;
+   }
+   setcolor(BLACK);
+		circle(700,200,100);
+
+        setfillstyle(1, 14);
+		fillellipse(x[0], y[0], 10, 10);
+
+    }
+   
+    //litiom
+	if(code=='l'){
+    		outtextxy(90,405,"l");
+    		t=getch();
+    		if(t=='i'){
+    			outtextxy(100,405,"i");
+			b=2;
+			for(int i=10 ; i >= 0 ; i--){
+				//proton
+				setfillstyle(1, 1);
+		fillellipse(700, 210, 10, 10);
+		setfillstyle(1, 1);
+		fillellipse(720, 210, 10, 10);
+		setfillstyle(1, 1);
+		fillellipse(680, 210, 10, 10);
+		//notron
+		setfillstyle(1, 4);
+		fillellipse(700, 190, 10, 10);
+		setfillstyle(1, 4);
+		fillellipse(720, 190, 10, 10);
+		setfillstyle(1, 4);
+		fillellipse(680, 190, 10, 10);
+			
+			//atom
+			setcolor(BLACK);
+		circle(700,200,100);
+		setcolor(BLACK);
+		circle(700,200,150);
+		//electron
+		
+		setfillstyle(1, 14);
+		fillellipse(x[0], y[0], 10, 10);
+		setfillstyle(1, 14);
+		fillellipse(x[1], y[1], 10, 10);
+        setfillstyle(1, 14);
+		fillellipse(x[2], y[2], 10, 10);
+        
+        delay(200);
+        
+    	setcolor(WHITE);
+    	setfillstyle(1, 15);
+		fillellipse(x[0], y[0], 10, 10);
+		setcolor(WHITE);
+    	setfillstyle(1, 15);
+		fillellipse(x[1], y[1], 10, 10);
+    	   setcolor(WHITE);
+    	setfillstyle(1, 15);
+		fillellipse(x[2], y[2], 10, 10);
+    	y[0] = 200+sin(i)*100;
+    	x[0] = 700+cos(i)*100;
+    	
+    	y[1] = 200-sin(i)*100;
+    	x[1] = 700-cos(i)*100;
+    	
+    	y[2] = 200-sin(i)*150;
+    	x[2] = 700-cos(i)*150;
+		
+}   
+setcolor(BLACK);
+		circle(700,200,100);
+		setcolor(BLACK);
+		circle(700,200,150);
+        setfillstyle(1, 14);
+		fillellipse(x[0], y[0], 10, 10);
+		setfillstyle(1, 14);
+		fillellipse(x[1], y[2], 10, 10);
+        setfillstyle(1, 14);
+		fillellipse(x[2], y[2], 10, 10);
+
+}
+} 
+      //berliom
+      if(code=='b'){
+    		outtextxy(90,405,"b");
+    		t=getch();
+    		if(t=='e'){
+    			outtextxy(105,405,"e");
+			b=2;
+			for(int i=10 ; i >= 0 ; i--){
+		//proton
+				setfillstyle(1, 1);
+		fillellipse(710, 210, 10, 10);
+		setfillstyle(1, 1);
+		fillellipse(730, 210, 10, 10);
+		setfillstyle(1, 1);
+		fillellipse(690, 210, 10, 10);
+		setfillstyle(1, 1);
+		fillellipse(670, 210, 10, 10);
+		//notron
+		setfillstyle(1, 4);
+		fillellipse(710, 190, 10, 10);
+		setfillstyle(1, 4);
+		fillellipse(730, 190, 10, 10);
+		setfillstyle(1, 4);
+		fillellipse(690, 190, 10, 10);
+		setfillstyle(1, 4);
+		fillellipse(670, 190, 10, 10);
+			
+		//atom
+			setcolor(BLACK);
+		circle(700,200,100);
+		setcolor(BLACK);
+		circle(700,200,150);
+		//electron
+		setfillstyle(1, 14);
+		fillellipse(x[0], y[0], 10, 10);
+		setfillstyle(1, 14);
+		fillellipse(x[1], y[1], 10, 10);
+        setfillstyle(1, 14);
+		fillellipse(x[2], y[2], 10, 10);
+        setfillstyle(1, 14);
+		fillellipse(x[3], y[3], 10, 10);
+        delay(200);
+          setcolor(WHITE);
+    	setfillstyle(1, 15);
+		fillellipse(x[0], y[0], 10, 10);
+		setcolor(WHITE);
+    	setfillstyle(1, 15);
+		fillellipse(x[1], y[1], 10, 10);
+    	   setcolor(WHITE);
+    	setfillstyle(1, 15);
+		fillellipse(x[2], y[2], 10, 10);
+    	   setcolor(WHITE);
+    	setfillstyle(1, 15);
+		fillellipse(x[3], y[3], 10, 10);
+		
+    	y[0] = 200+sin(i)*100;
+    	x[0] = 700+cos(i)*100;
+    	
+    	y[1] = 200-sin(i)*100;
+    	x[1] = 700-cos(i)*100;
+    	
+    	y[2] = 200+sin(i)*150;
+    	x[2] = 700+cos(i)*150;
+    	
+    	y[3] = 200-sin(i)*150;
+    	x[3] = 700-cos(i)*150;
+		
+}   
+setcolor(BLACK);
+		circle(700,200,100);
+		setcolor(BLACK);
+		circle(700,200,150);
+        setfillstyle(1, 14);
+		fillellipse(x[0], y[0], 10, 10);
+		setfillstyle(1, 14);
+		fillellipse(x[1], y[2], 10, 10);
+        setfillstyle(1, 14);
+		fillellipse(x[2], y[2], 10, 10);
+        setfillstyle(1, 14);
+		fillellipse(x[3], y[3], 10, 10);
+}
+} 
+//boron
+if(code=='B'){
+    		outtextxy(90,405,"B");
+
+			b=2;
+			for(int i=10 ; i >= 0 ; i--){
+		//proton
+				setfillstyle(1, 1);
+		fillellipse(730, 210, 10, 10);
+		setfillstyle(1, 1);
+		fillellipse(710, 210, 10, 10);
+		setfillstyle(1, 1);
+		fillellipse(690, 210, 10, 10);
+		setfillstyle(1, 1);
+		fillellipse(670, 210, 10, 10);
+		setfillstyle(1, 1);
+		fillellipse(650, 210, 10, 10);
+		//notron
+		setfillstyle(1, 4);
+		fillellipse(730, 190, 10, 10);
+		setfillstyle(1, 4);
+		fillellipse(710, 190, 10, 10);
+		setfillstyle(1, 4);
+		fillellipse(690, 190, 10, 10);
+		setfillstyle(1, 4);
+		fillellipse(670, 190, 10, 10);
+		setfillstyle(1, 4);
+		fillellipse(650, 190, 10, 10);
+			
+		//atom
+			setcolor(BLACK);
+		circle(700,200,100);
+		setcolor(BLACK);
+		circle(700,200,150);
+		//electron
+		setfillstyle(1, 14);
+		fillellipse(x[0], y[0], 10, 10);
+		setfillstyle(1, 14);
+		fillellipse(x[1], y[1], 10, 10);
+        setfillstyle(1, 14);
+		fillellipse(x[2], y[2], 10, 10);
+        setfillstyle(1, 14);
+		fillellipse(x[3], y[3], 10, 10);
+		setfillstyle(1, 14);
+		fillellipse(x[4], y[4], 10, 10);
+	
+		
+        delay(200);
+          setcolor(WHITE);
+    	setfillstyle(1, 15);
+		fillellipse(x[0], y[0], 10, 10);
+		setcolor(WHITE);
+    	setfillstyle(1, 15);
+		fillellipse(x[1], y[1], 10, 10);
+    	   setcolor(WHITE);
+    	setfillstyle(1, 15);
+		fillellipse(x[2], y[2], 10, 10);
+    	   setcolor(WHITE);
+    	setfillstyle(1, 15);
+		fillellipse(x[3], y[3], 10, 10);
+		setcolor(WHITE);
+    	setfillstyle(1, 15);
+		fillellipse(x[4], y[4], 10, 10);
+		
+		
+    	y[0] = 200+sin(i)*100;
+    	x[0] = 700+cos(i)*100;
+    	
+    	y[1] = 200-sin(i)*100;
+    	x[1] = 700-cos(i)*100;
+    	
+    	y[2] = 200+sin(i)*150;
+    	x[2] = 700+cos(i)*150;
+    	
+    	y[3] = 200-sin(i)*150;
+    	x[3] = 700-cos(i)*150;
+    	
+    	y[4] = 200-cos(i)*150;
+    	x[4] = 700+sin(i)*150;
+    	
+    	
+		
+}   
+setcolor(BLACK);
+		circle(700,200,100);
+		setcolor(BLACK);
+		circle(700,200,150);
+        setfillstyle(1, 14);
+		fillellipse(x[0], y[0], 10, 10);
+		setfillstyle(1, 14);
+		fillellipse(x[1], y[2], 10, 10);
+        setfillstyle(1, 14);
+		fillellipse(x[2], y[2], 10, 10);
+        setfillstyle(1, 14);
+		fillellipse(x[3], y[3], 10, 10);
+		setfillstyle(1, 14);
+		fillellipse(x[4], y[4], 10, 10);
+}
+
+//Carbon
+    if(code=='C'){
+    		outtextxy(90,405,"C");
+
+			b=2;
+			
+			for(int i=10 ; i >= 0 ; i--){
+		//proton
+				setfillstyle(1, 1);
+		fillellipse(730, 210, 10, 10);
+		setfillstyle(1, 1);
+		fillellipse(710, 210, 10, 10);
+		setfillstyle(1, 1);
+		fillellipse(690, 210, 10, 10);
+		setfillstyle(1, 1);
+		fillellipse(670, 210, 10, 10);
+		setfillstyle(1, 1);
+		fillellipse(650, 210, 10, 10);
+		setfillstyle(1, 1);
+		fillellipse(750, 210, 10, 10);
+		//notron
+		setfillstyle(1, 4);
+		fillellipse(730, 190, 10, 10);
+		setfillstyle(1, 4);
+		fillellipse(710, 190, 10, 10);
+		setfillstyle(1, 4);
+		fillellipse(690, 190, 10, 10);
+		setfillstyle(1, 4);
+		fillellipse(670, 190, 10, 10);
+		setfillstyle(1, 4);
+		fillellipse(650, 190, 10, 10);
+		setfillstyle(1, 4);
+		fillellipse(750, 190, 10, 10);
+			
+		//atom
+			setcolor(BLACK);
+		circle(700,200,100);
+		setcolor(BLACK);
+		circle(700,200,150);
+		//electron
+		setfillstyle(1, 14);
+		fillellipse(x[0], y[0], 10, 10);
+		setfillstyle(1, 14);
+		fillellipse(x[1], y[1], 10, 10);
+        setfillstyle(1, 14);
+		fillellipse(x[2], y[2], 10, 10);
+        setfillstyle(1, 14);
+		fillellipse(x[3], y[3], 10, 10);
+		setfillstyle(1, 14);
+		fillellipse(x[4], y[4], 10, 10);
+		setfillstyle(1, 14);
+		fillellipse(x[5], y[5], 10, 10);
+		
+	
+		
+        delay(200);
+          setcolor(WHITE);
+    	setfillstyle(1, 15);
+		fillellipse(x[0], y[0], 10, 10);
+		setcolor(WHITE);
+    	setfillstyle(1, 15);
+		fillellipse(x[1], y[1], 10, 10);
+    	   setcolor(WHITE);
+    	setfillstyle(1, 15);
+		fillellipse(x[2], y[2], 10, 10);
+    	   setcolor(WHITE);
+    	setfillstyle(1, 15);
+		fillellipse(x[3], y[3], 10, 10);
+		setcolor(WHITE);
+    	setfillstyle(1, 15);
+		fillellipse(x[4], y[4], 10, 10);
+		setcolor(WHITE);
+    	setfillstyle(1, 15);
+		fillellipse(x[5], y[5], 10, 10);
+		
+		
+		
+    	y[0] = 200+sin(i)*100;
+    	x[0] = 700+cos(i)*100;
+    	
+    	y[1] = 200-sin(i)*100;
+    	x[1] = 700-cos(i)*100;
+    	
+    	y[2] = 200+sin(i)*150;
+    	x[2] = 700+cos(i)*150;
+    	
+    	y[3] = 200-sin(i)*150;
+    	x[3] = 700-cos(i)*150;
+    	
+    	y[4] = 200-cos(i)*150;
+    	x[4] = 700+sin(i)*150;
+    	
+    	y[5] = 200+cos(i)*150;
+    	x[5] = 700-sin(i)*150;
+    	
+    	;
+    	
+		
+}   
+setcolor(BLACK);
+		circle(700,200,100);
+		setcolor(BLACK);
+		circle(700,200,150);
+        setfillstyle(1, 14);
+		fillellipse(x[0], y[0], 10, 10);
+		setfillstyle(1, 14);
+		fillellipse(x[1], y[2], 10, 10);
+        setfillstyle(1, 14);
+		fillellipse(x[2], y[2], 10, 10);
+        setfillstyle(1, 14);
+		fillellipse(x[3], y[3], 10, 10);
+		setfillstyle(1, 14);
+		fillellipse(x[4], y[4], 10, 10);
+		setfillstyle(1, 14);
+		fillellipse(x[5], y[5], 10, 10);
+		
+}
+
+      //errror
+      if(b==1){
+	  
+        initwindow(400,180,"Error");
+        floodfill(10,10,WHITE);
+        setcolor(BLACK);
+        rectangle(310, 150, 364, 110);   
+    setbkcolor(15);
+    	setcolor(0);
+        settextstyle(4,0,1);
+	    settextjustify(1,1);
+		outtextxy(338,135,"OK");
+		 
+		 setcolor(0);
+        settextstyle(4,0,1);
+	    settextjustify(1,1);
+		 outtextxy(200,90,"please enter a true charecter");
+		 while(true){
+		 
+	    if(ismouseclick(WM_LBUTTONUP))    
+      {
+        while (!ismouseclick(WM_LBUTTONUP)) delay(1);    
+       
+        getmouseclick(WM_LBUTTONUP, q, w);    
+    
+        if((q >= 310) && (q <= 364) && (w >= 110) && (w <= 150))    
+        {
+              closegraph();
+              break;
+          }
+			     }
+      }
+  }
+  //try again
+  if(b==2){
+
+      setcolor(BLACK);
+        rectangle(800, 400, 600, 360);   
+    setbkcolor(15);
+    	setcolor(0);
+        settextstyle(4,0,1);
+	    settextjustify(1,1);
+		 outtextxy(700,385,"Try again");
+		 while(true){
+		 
+	    if(ismouseclick(WM_LBUTTONUP))    
+      {
+        while (!ismouseclick(WM_LBUTTONUP)) delay(1);    
+       
+        getmouseclick(WM_LBUTTONUP, q, w);    
+    
+        if((q >= 600) && (q <= 800) && (w >= 360) && (w <= 400))    
+        {
+             closegraph();
+              break;
+          }
+			     }
+      }
+
+    }
+    
+}
+
+   
+	    closegraph();
+	    return 0;
+
+
+}
